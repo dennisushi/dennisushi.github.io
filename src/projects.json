@@ -2,7 +2,7 @@
   {
     "id": "project1",
     "title": "ViT-A*: Legged Robot Path Planning using Vision Transformer A*",
-    "description": " Legged robot navigation through data-driven path planning, incorporating neural networks, differentiable planners, and Vision Transformers for efficient handling of varied terrains and obstacles, validated on real quadruped robots.",
+    "description": "Legged robot navigation through data-driven path planning, incorporating neural networks, differentiable planners, and Vision Transformers for efficient handling of varied terrains and obstacles, validated on real quadruped robots.",
     "imageURL": "images/vita.png",
     "authors": ["Jianwei Liu*", "Shirui Lyu*","Denis Hadjivelichkov", "Valerio Modugno", "Dimitrios Kanoulas"],
     "venue": "Humanoids 2023",

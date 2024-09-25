@@ -65,6 +65,10 @@ function App() {
         here</a>
       </h4>
       <ExperienceTimeline experiences={experiencesData}/>
+      <div class="attribution">
+        <h6>Website template made by &nbsp;
+          <a href="https://github.com/dennisushi/dennisushi.github.io">Dennis Hadjivelichkov</a></h6>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
+:root{
+  --card-bg: linear-gradient(135deg,  #faf1ea, #fbe7e7, #f8effd);
+  --card-bg-hover: linear-gradient(135deg,  #fae6d7, #f8d3d3, #edd6f9);
+  --card-border: 1px solid #aaa;
+  --header-bg: linear-gradient(-45deg,  #430115, #4f156d);
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -37,12 +44,7 @@ body, html {
 }
 
 .App-header {
-  background: linear-gradient(-45deg, 
-    /* #072b26,  */
-    /* #3a062d,  */
-    #430115, 
-    #4f156d
-    );
+  background: var(--header-bg);
   background-size: 400% 400%;
   animation: gradientShift 7s ease infinite;
   padding: 30px;
@@ -101,21 +103,22 @@ body, html {
 }
 
 .ProjectCard {
-
+  background: var(--card-bg);
   display: flex;
   flex-wrap: wrap;
   flex: 0 0 250px;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ccc;
+  border: var(--card-border);
   border-radius: 8px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .ProjectCard:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: var(--card-bg-hover);
 }
 
 .ProjectCard img {
@@ -126,7 +129,6 @@ body, html {
   height: 40%; /* Will be the same as the .ProjectCard container */
   object-fit: cover; /* Cover the container area */
   object-position: center top; /* Crop from the bottom */
-  border-bottom: 1px solid #ddd;
 }
 
 .ProjectCard h2 {
@@ -136,7 +138,7 @@ body, html {
 }
 
 .ProjectCard .Authors, .Venue {
-  color:#908b8b;
+  color:#686161;
 }
 
 .ProjectCard p {
@@ -251,9 +253,16 @@ body, html {
   margin-left: 40px;
   margin-right: 40px;
   max-width:700px;
-  background-color: #fff; /* Light background for the items */
-  border: 1px solid #ddd; /* Subtle border */
+  background: var(--card-bg); /* Light background for the items */
+  border: var(--card-border); /* Subtle border */
   border-radius: 8px; /* Soft rounded corners */
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.timeline-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: var(--card-bg-hover);
 }
 
 /* Width of the line */
@@ -298,4 +307,13 @@ body, html {
   padding: 10px 0;
   padding-left : 30px;
   margin:0; 
+}
+
+.attribution {
+  font-size: 0.9em;
+  color: #d4d3d3;
+  margin-top: 1em;
+}
+.attribution a{
+  color: #d4d3d3;
 }
